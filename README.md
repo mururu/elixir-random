@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/mururu/elixir-random.png?branch=master)](https://travis-ci.org/mururu/elixir-random)
 
-A Elixir wrapper for the random module the Erlang.
+A Elixir wrapper for the random module of Erlang.
+
 This is not cryptographically strong as the random module of Erlang.
 
 ## Examples
