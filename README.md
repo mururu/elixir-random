@@ -1,4 +1,4 @@
-# Random for Elixir
+# Random module for Elixir
 
 [![Build Status](https://travis-ci.org/mururu/elixir-random.png?branch=master)](https://travis-ci.org/mururu/elixir-random)
 
