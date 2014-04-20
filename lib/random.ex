@@ -97,7 +97,7 @@ defmodule Random do
     :lists.nth(:random.uniform(length(list)), list)
   end
 
-  def sample(range) when is_range(range) do
+  def sample(range) when is_record(range, Range) do
     list = Enum.to_list(range)
     sample(list)
   end
@@ -117,7 +117,7 @@ defmodule Random do
     lc { _, x } inlist list |> :lists.sort |> :lists.sublist(n), do: x
   end
 
-  def sample(range, n) when is_range(range) and is_integer(n) and n >= 0 do
+  def sample(range, n) when is_record(range, Range) and is_integer(n) and n >= 0 do
     list = Enum.to_list(range)
     sample(list, n)
   end
@@ -137,7 +137,7 @@ defmodule Random do
     lc { _, x } inlist list |> :lists.sort, do: x
   end
 
-  def shuffle(range) when is_range(range) do
+  def shuffle(range) when is_record(range, Range) do
     list = Enum.to_list(range)
     shuffle(list)
   end
