@@ -47,7 +47,7 @@ defmodule RandomTest do
   test "sample list returns list" do
     Enum.each 0..10000, fn(_) ->
       list = Random.sample([0,1,2], 2)
-      assert list |> Enum.sort |> Enum.all? &1 in [0,1,2]
+      assert list |> Enum.sort |> Enum.all? &(&1 in [0,1,2])
       assert list |> Enum.uniq |> Enum.count == list |> Enum.count
     end
 
@@ -60,7 +60,7 @@ defmodule RandomTest do
   test "sample range returns list" do
     Enum.each 0..10000, fn(_) ->
       list = Random.sample(1..3, 2)
-      assert list |> Enum.sort |> Enum.all? &1 in [1,2,3]
+      assert list |> Enum.sort |> Enum.all? &(&1 in [1,2,3])
       assert list |> Enum.uniq |> Enum.count == list |> Enum.count
     end
 
