@@ -4,7 +4,7 @@ defmodule Random.Mixfile do
   def project do
     [ app: :random,
       version: "0.0.3",
-      elixir: "~> 0.13.3",
+      elixir: "== 0.13.3 or ~> 0.14.0-dev",
       deps: deps ]
   end
 
