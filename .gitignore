@@ -1,3 +1,3 @@
-/ebin
 /deps
+/_build
 erl_crash.dump
