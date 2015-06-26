@@ -4,13 +4,27 @@ defmodule Random.Mixfile do
   def project do
     [ app: :random,
       version: "0.0.3",
-      elixir: "== 0.13.3 or ~> 0.14.0-dev",
+      elixir: "~> 1.0.0",
+      description: description,
+      package: package,
       deps: deps ]
   end
 
   # Configuration for the OTP application
   def application do
     []
+  end
+
+  defp description do
+    """
+    A Elixir wrapper for the random module of Erlang.
+
+    This is not cryptographically strong as the random module of Erlang."
+    """
+  end
+
+  defp package do
+    [links: %{"Github" => "https://github.com/mururu/elixir-random"}]
   end
 
   # Returns the list of dependencies in the format:
