@@ -79,7 +79,7 @@ defmodule Random do
   end
 
   @doc """
-  Returns a radom element from the list or the range in case
+  Returns a random element from the list or the range in case
   that it is not empty and updates the state  in the process
   dictionary, otherwise returns nil.
 
